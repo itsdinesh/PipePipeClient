@@ -1140,11 +1140,20 @@ public class DownloadDialog extends DialogFragment
         final String subtitleExtension = (format == MediaFormat.TTML ? MediaFormat.SRT : format).suffix;
         final String subtitleFileName = baseName + "." + subtitleExtension;
 
+        StoredFileHelper subtitleStorage = null;
         try {
             final StoredDirectoryHelper parent = new StoredDirectoryHelper(context,
                     videoStorage.getParentUri(), videoStorage.getTag());
-            final StoredFileHelper subtitleStorage = parent.createFile(subtitleFileName,
+            subtitleStorage = parent.createFile(subtitleFileName,
                     format.mimeType);
+        } catch (Exception e) {
+            Log.w(TAG, "Failed to create subtitle file alongside video", e);
+        }
+
+        try {
+            if ((subtitleStorage == null || !subtitleStorage.canWrite()) && mainStorageVideo != null) {
+                subtitleStorage = mainStorageVideo.createFile(subtitleFileName, format.mimeType);
+            }
 
             if (subtitleStorage != null && subtitleStorage.canWrite()) {
                 if (subtitleStorage.length() > 0) {
