@@ -1006,6 +1006,7 @@ public class DownloadDialog extends DialogFragment
             return;
         }
 
+        boolean shouldDismiss = true;
         final Stream selectedStream;
         Stream secondaryStream = null;
         final char kind;
@@ -1065,7 +1066,9 @@ public class DownloadDialog extends DialogFragment
 
                 if (prefs.getBoolean(getString(R.string.download_caption_auto), false)
                         && subtitleStreamsAdapter.getCount() > 0) {
-                    downloadSubtitleForVideo(storage);
+                    shouldDismiss = false;
+                    dialogBinding.videoAudioGroup.check(R.id.subtitle_button);
+                    dialogBinding.getRoot().post(() -> dialogBinding.okButton.performClick());
                 }
                 break;
             case R.id.subtitle_button:
@@ -1124,71 +1127,9 @@ public class DownloadDialog extends DialogFragment
         Toast.makeText(context, getString(R.string.download_has_started),
                 Toast.LENGTH_SHORT).show();
 
-        dismiss();
-    }
-
-    private void downloadSubtitleForVideo(@NonNull final StoredFileHelper videoStorage) {
-        final int bestSubtitleIndex = getSubtitleIndexBy(wrappedSubtitleStreams.getStreamsList());
-        final SubtitlesStream subtitleStream = subtitleStreamsAdapter.getItem(bestSubtitleIndex);
-
-        final String videoFileName = videoStorage.getName();
-        final int lastDotIndex = videoFileName.lastIndexOf('.');
-        final String baseName = lastDotIndex > 0
-                ? videoFileName.substring(0, lastDotIndex) : videoFileName;
-
-        final MediaFormat format = subtitleStream.getFormat();
-        final String subtitleExtension = (format == MediaFormat.TTML ? MediaFormat.SRT : format).suffix;
-        final String subtitleFileName = baseName + "." + subtitleExtension;
-
-        StoredFileHelper subtitleStorage = null;
-        try {
-            final StoredDirectoryHelper parent = new StoredDirectoryHelper(context,
-                    videoStorage.getParentUri(), videoStorage.getTag());
-            subtitleStorage = parent.createFile(subtitleFileName,
-                    format.mimeType);
-        } catch (Exception e) {
-            Log.w(TAG, "Failed to create subtitle file alongside video", e);
-        }
-
-        try {
-            if ((subtitleStorage == null || !subtitleStorage.canWrite()) && mainStorageVideo != null) {
-                subtitleStorage = mainStorageVideo.createFile(subtitleFileName, format.mimeType);
-            }
-
-            if (subtitleStorage != null && subtitleStorage.canWrite()) {
-                if (subtitleStorage.length() > 0) {
-                    subtitleStorage.truncate();
-                }
-
-                if (!subtitleStream.isUrl()) {
-                    String content = subtitleStream.getContent();
-                    if (subtitleStream.getFormat() == MediaFormat.TTML) {
-                        content = SrtFromTtmlWriter.convertTtmlToSrt(content);
-                    }
-                    OutputStream outputStream = subtitleStorage.context.getContentResolver()
-                            .openOutputStream(subtitleStorage.getUri());
-                    outputStream.write(content.getBytes());
-                    outputStream.close();
-                    return;
-                }
-
-                String psName = null;
-                String[] psArgs = null;
-                if (subtitleStream.getFormat() == MediaFormat.TTML) {
-                    psName = Postprocessing.ALGORITHM_TTML_CONVERTER;
-                    psArgs = new String[]{
-                            subtitleStream.getFormat().getSuffix(),
-                            "false" // ignore empty frames
-                    };
-                }
-
-                DownloadManagerService.startMission(context,
-                        new String[]{subtitleStream.getContent()},
-                        subtitleStorage, 's', 1, currentInfo.getUrl(), psName, psArgs, 0,
-                        new MissionRecoveryInfo[]{new MissionRecoveryInfo(subtitleStream)});
-            }
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to auto-download subtitle", e);
+        if (shouldDismiss) {
+            dismiss();
         }
     }
+
 }
