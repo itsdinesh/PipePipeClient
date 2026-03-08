@@ -1068,7 +1068,11 @@ public class DownloadDialog extends DialogFragment
                         && subtitleStreamsAdapter.getCount() > 0) {
                     shouldDismiss = false;
                     dialogBinding.videoAudioGroup.check(R.id.subtitle_button);
-                    dialogBinding.getRoot().post(() -> dialogBinding.okButton.performClick());
+                    dialogBinding.getRoot().post(() -> {
+                        if (okButton != null) {
+                            okButton.performClick();
+                        }
+                    });
                 }
                 break;
             case R.id.subtitle_button:
