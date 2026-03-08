@@ -428,6 +428,7 @@
     <string name="downloads_queue_limit">downloads_queue_limit</string>
 
     <string name="default_download_threads">default_download_threads</string>
+    <string name="download_caption_auto">download_caption_auto</string>
 
     <!-- Preferred action on open (open from external app) -->
     <string name="preferred_open_action_key">preferred_open_action_key</string>

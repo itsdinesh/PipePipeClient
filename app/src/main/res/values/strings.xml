@@ -353,6 +353,8 @@
 <string name="recaptcha_solve">Solve</string>
 <string name="recaptcha_done_button">Done</string>
 <!-- Downloads -->
+<string name="download_caption_auto_title">Auto-download captions</string>
+<string name="download_caption_auto_summary">Automatically download the preferred caption when downloading a video</string>
 <string name="settings_category_downloads_title">Download</string>
 <string name="settings_file_charset_title">Allowed characters in filenames</string>
 <string name="settings_file_replacement_character_summary">Invalid characters are replaced with this value</string>
