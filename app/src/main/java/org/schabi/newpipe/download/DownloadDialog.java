@@ -136,6 +136,7 @@ public class DownloadDialog extends DialogFragment
     // Variables for file name and MIME type when picking new folder because it's not set yet
     private String filenameTmp;
     private String mimeTmp;
+    private boolean isAutoQueuingSubtitle = false;
 
     private final ActivityResultLauncher<Intent> requestDownloadSaveAsLauncher =
             registerForActivityResult(
@@ -821,9 +822,12 @@ public class DownloadDialog extends DialogFragment
         // check for existing file with the same name
         checkSelectedDownload(mainStorage, mainStorage.findFile(filenameTmp), filenameTmp, mimeTmp);
 
-        // remember the last media type downloaded by the user
-        prefs.edit().putString(getString(R.string.last_used_download_type), selectedMediaType)
-                .apply();
+        // remember the last media type downloaded by the user, but don't overwrite it
+        // if we are just automating the subtitle UI download in the background
+        if (!isAutoQueuingSubtitle) {
+            prefs.edit().putString(getString(R.string.last_used_download_type), selectedMediaType)
+                    .apply();
+        }
     }
 
     private void checkSelectedDownload(final StoredDirectoryHelper mainStorage,
@@ -1067,6 +1071,7 @@ public class DownloadDialog extends DialogFragment
                 if (prefs.getBoolean(getString(R.string.download_caption_auto), false)
                         && subtitleStreamsAdapter.getCount() > 0) {
                     shouldDismiss = false;
+                    isAutoQueuingSubtitle = true;
                     dialogBinding.videoAudioGroup.check(R.id.subtitle_button);
                     dialogBinding.getRoot().post(() -> {
                         if (okButton != null) {
