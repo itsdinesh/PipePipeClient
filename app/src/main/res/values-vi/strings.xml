@@ -944,11 +944,11 @@ nSự khác biệt giữa hai loại này là cái nào nhanh thường thiếu 
 <string name="sponsor_promote">Trở thành người ủng hộ</string>
 <string name="random_play_order_title">Trình tự ngẫu nhiên</string>
 <string name="random_play_order_summary">Tự động xáo trộn danh sách phát cục bộ của bạn khi phát trong nền</string>
-<string name="update_log">Sau một thời gian làm việc, chúng tôi đã tìm ra phương pháp đáng tin cậy mới để giúp đăng nhập YouTube hoạt động trở lại.\n\n### Tính năng mới\n\n- Hỗ trợ lại đăng nhập (YouTube)\n- Sử dụng phương pháp mới để đảm bảo tiêu đề không bao giờ bị tự động dịch (YouTube)\n\n### Sửa lỗi\n\n- Lỗi \"Nội dung không khả dụng\" ngẫu nhiên do mã hóa SABR (YouTube)\n- Các mục liên quan không hiển thị lượt xem và thời lượng (YouTube)\n- Tăng khoảng thời gian tìm nạp nguồn cấp dữ liệu để tránh bị chặn IP (BiliBili)\n- Một số liên kết bị nhận dạng sai là URL PeerTube\n\n### Khác\n\n- Cập nhật bản dịch (Tiếng Pháp)\n- Cải thiện độ ổn định</string>
+<string name="update_log">### Tính năng mới\n\n- Cải thiện nhẹ giao diện người dùng để PipePipe trông hiện đại hơn\n- Thiết kế lại menu bộ lọc tìm kiếm\n\n### Sửa lỗi\n\n- Không phát được video YT nếu đã đăng nhập trong một số điều kiện nhất định (YouTube)\n- Kết quả tìm kiếm hiển thị sai tên người tải lên trong một số điều kiện nhất định (YouTube)\n- Lỗi phân tích trong một số điều kiện nhất định (YouTube)\n- Thỉnh thoảng không thể trích xuất người tải lên của kênh (BiliBili)\n- Thỉnh thoảng không thể trích xuất chi tiết kênh do kiểm soát rủi ro (BiliBili)\n- Ứng dụng bị sập trong một số điều kiện nhất định\n\n### Khác\n\n- Cải thiện độ ổn định</string>
 <string name="speeding_playback_title">Nhấn và giữ để tăng tốc độ phát lại</string>
 <string name="view_on_github">Xem trên GitHub</string>
 <string name="donation_dialog_title">Hỗ trợ Dự án</string>
-<string name="donation_dialog_message">Cảm ơn bạn đã sử dụng PipePipe! Nếu bạn thấy nó hữu ích, hãy xem xét trở thành người ủng hộ trên Ko-Fi. Sự ủng hộ của bạn rất quan trọng đối với tôi và giúp tôi bổ sung thêm nhiều tính năng mới thú vị. Mỗi sự hỗ trợ đều có ý nghĩa! 😇</string>
+<string name="donation_dialog_message">Hỗ trợ chúng tôi trên Ko‑fi và giúp việc xem video luôn mở và không theo dõi.</string>
 <string name="fullscreen_gesture_control_summary">Sử dụng cử chỉ để vào / thoát toàn màn hình</string>
 <string name="fullscreen_gesture_control_title">Điều khiển cử chỉ toàn màn hình</string>
 <string name="require_audio_focus_summary">Đảm bảo chỉ có PipePipe đang phát âm thanh</string>
@@ -1114,4 +1114,14 @@ nSự khác biệt giữa hai loại này là cái nào nhanh thường thiếu 
 <string name="beta_test_dialog_title">Tham gia thử nghiệm PipePipe 5.0.0 Beta-2!</string>
 <string name="beta_test_dialog_message">Cảm ơn bạn đã luôn ủng hộ chúng tôi! Chúng tôi rất háo hức ra mắt PipePipe 5.0.0 Beta-2, một bước tiến lớn trong quá trình xây dựng lại ứng dụng từ đầu.\n\nPhiên bản này tập trung vào những cải tiến đáng kể về độ ổn định và mức độ hoàn thiện tính năng, dựa trên phản hồi sớm. Dù chúng tôi đã tiến rất gần đến bản phát hành chính thức, đây vẫn là bản beta và phản hồi của bạn vô cùng quý giá.\n\nLưu ý: Phiên bản này sẽ được cài đặt với tên \"PipePipe Beta\" và sẽ không ảnh hưởng đến ứng dụng hoặc dữ liệu hiện tại của bạn.\n\nNếu bạn gặp lỗi hoặc có đề xuất, vui lòng cho chúng tôi biết bằng cách tạo một issue trên kho GitHub của chúng tôi!</string>
 <string name="trending_replaced">YouTube gần đây đã gỡ bỏ tính năng Video thịnh hành, vì vậy chúng tôi đã cập nhật tab thịnh hành mặc định của YouTube để hiển thị các luồng trực tiếp được đề xuất thay vào đó. Nếu bạn không muốn thấy điều này, bạn có thể xóa tab trong Cài đặt và đặt tab khác làm trang chủ của mình.</string>
+<string name="youtube_login_warning_title">Chỉ đăng nhập khi cần thiết</string>
+<string name="youtube_login_warning_message">Do mã hóa của YouTube, phát lại khi đã đăng nhập chỉ cung cấp định dạng AVC, không thể tải xuống âm thanh בלבד, không thể tua lại các luồng trực tiếp đang diễn ra, và việc trích xuất kém ổn định hơn. \n\nBạn chỉ nên đăng nhập nếu:\n1. Bạn không thể xem video ẩn danh vì bị chặn IP\n2. Bạn cần xem các video bị giới hạn độ tuổi\n3. Bạn là thành viên của một kênh và cần xem các video chỉ dành cho thành viên của kênh đó\n\nNếu việc trích xuất video hoặc phát lại thất bại khi đã đăng nhập, vui lòng thử đăng xuất và báo cáo sự cố trên GitHub.</string>
+<string name="filter">Bộ lọc</string>
+<string name="search_type">Loại tìm kiếm</string>
+<string name="select_service">Chọn dịch vụ</string>
+<string name="perform_search">Thực hiện tìm kiếm</string>
+<string name="done">Xong</string>
+<string name="expand">Mở rộng</string>
+<string name="collapse">Thu gọn</string>
+<string name="sponsor_promote_later">Để sau</string>
 </resources>

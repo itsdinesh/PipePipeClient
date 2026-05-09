@@ -833,14 +833,14 @@
 <string name="dont_auto_queue_long_description">Nur Videos kürzer als 6 Minuten automatisch in die Warteschlange stellen</string>
 <string name="enable_notification_text">Bitte aktivieren Sie Benachrichtigungen für diese App, um sicherzustellen, dass sie normal funktioniert. Wir werden Sie nur bei Bedarf benachrichtigen.</string>
 <string name="enable_notification_title">Benachrichtigungen aktivieren</string>
-<string name="sponsor_promote">Unterstützer werden</string>
+<string name="sponsor_promote">Auf Ko-fi unterstützen</string>
 <string name="random_play_order_title">Zufällige Reihenfolge</string>
 <string name="random_play_order_summary">Automatisch Ihre lokalen Wiedergabelisten mischen, wenn sie im Hintergrund abgespielt werden</string>
-<string name="update_log">Nach einiger Arbeit haben wir eine neue zuverlässige Methode gefunden, um den YouTube-Login wieder zum Laufen zu bringen.\n\n### Neue Funktionen\n\n- Erneute Unterstützung für den Login (YouTube)\n- Verwendung einer neuen Methode, um sicherzustellen, dass Titel nie automatisch übersetzt werden (YouTube)\n\n### Fehlerbehebungen\n\n- Gelegentlicher Fehler \"Inhalt nicht verfügbar\" aufgrund von SABR-Verschlüsselung (YouTube)\n- Verwandte Elemente haben keine Aufrufzahlen und Dauer (YouTube)\n- Erhöhung des Feed-Abrufintervalls, um IP-Sperren zu vermeiden (BiliBili)\n- Einige Links werden fälschlicherweise als PeerTube-URL erkannt\n\n### Sonstiges\n\n- Aktualisierung der Übersetzungen (Französisch)\n- Verbesserung der Stabilität</string>
+<string name="update_log">### Neue Funktionen\n\n- Die Benutzeroberfläche leicht verbessert, damit PipePipe moderner aussieht\n- Das Suchfilter-Menü neu gestaltet \n\n### Fehlerbehebungen\n\n- YT-Videos konnten unter bestimmten Bedingungen nicht abgespielt werden, wenn man eingeloggt war (YouTube)\n- Suchergebnisse haben unter bestimmten Bedingungen falsche Uploader-Namen (YouTube)\n- Parse-Fehler unter bestimmten Bedingungen (YouTube)\n- Kanal-Uploader konnten manchmal nicht extrahiert werden (BiliBili)\n- Kanal-Details konnten manchmal aufgrund von Risikokontrolle nicht extrahiert werden (BiliBili)\n- Absturz unter bestimmten Bedingungen \n\n### Sonstiges\n\n- Stabilität verbessern</string>
 <string name="speeding_playback_title">Langes Drücken, um die Wiedergabe zu beschleunigen</string>
 <string name="view_on_github">Auf GitHub ansehen</string>
-<string name="donation_dialog_title">Projekt unterstützen</string>
-<string name="donation_dialog_message">Danke, dass Sie PipePipe verwenden! Wenn Sie es nützlich finden, ziehen Sie in Betracht, ein Unterstützer auf Ko-Fi zu werden. Ihre Unterstützung ist mir wichtig und hilft mir, mehr spannende neue Funktionen hinzuzufügen. Jede Unterstützung zählt! 😇</string>
+<string name="donation_dialog_title">Gefällt dir PipePipe?</string>
+<string name="donation_dialog_message">Unterstütze uns auf Ko‑fi und hilf dabei, das Videoschauen offen und ohne Tracking zu halten.</string>
 <string name="fullscreen_gesture_control_summary">Verwenden Sie Gesten, um den Vollbildmodus ein- oder auszuschalten</string>
 <string name="fullscreen_gesture_control_title">Vollbild-Gestenkontrolle</string>
 <string name="require_audio_focus_summary">Stellen Sie sicher, dass nur PipePipe Audio abspielt</string>
@@ -1006,4 +1006,14 @@
 <string name="beta_test_dialog_title">Nimm am PipePipe 5.0.0 Beta-2-Test teil!</string>
 <string name="beta_test_dialog_message">Vielen Dank für Ihre fortwährende Unterstützung! Wir freuen uns, PipePipe 5.0.0 Beta-2 zu veröffentlichen – ein großer Schritt nach vorn in der grundlegenden Neuentwicklung der App.\n\nDiese Version konzentriert sich auf deutliche Verbesserungen bei Stabilität und Funktionsumfang, basierend auf frühem Feedback. Auch wenn wir der finalen Veröffentlichung deutlich näher kommen, handelt es sich weiterhin um eine Beta – Ihr Feedback ist von unschätzbarem Wert.\n\nHinweis: Dies wird als \"PipePipe Beta\" installiert und hat keine Auswirkungen auf Ihre aktuelle App oder Ihre Daten.\n\nWenn Sie Fehler finden oder Vorschläge haben, lassen Sie es uns bitte wissen, indem Sie ein Issue in unserem GitHub-Repository eröffnen!</string>
 <string name="trending_replaced">YouTube hat die Funktion „Trendvideos“ kürzlich entfernt, daher haben wir unseren standardmäßigen YouTube-Trends-Tab aktualisiert, damit stattdessen empfohlene Livestreams angezeigt werden. Wenn du das nicht sehen möchtest, kannst du den Tab in den Einstellungen entfernen und einen anderen als deine Startseite festlegen.</string>
+<string name="youtube_login_warning_title">Nur bei Bedarf anmelden</string>
+<string name="youtube_login_warning_message">Aufgrund der Verschlüsselung von YouTube bietet die Wiedergabe nach der Anmeldung nur AVC-Formate; Audio-Only-Downloads sind nicht verfügbar, laufende Live-Streams können nicht zurückgespult werden, und die Extraktion ist weniger stabil. \n\nSie sollten sich nur anmelden, wenn:\n1. Sie Videos aufgrund von IP-Sperren nicht anonym ansehen können\n2. Sie altersbeschränkte Videos ansehen müssen\n3. Sie Mitglied eines Kanals sind und dessen nur für Mitglieder zugängliche Videos ansehen müssen\n\nWenn die Videoextraktion oder Wiedergabe bei angemeldetem Konto fehlschlägt, melden Sie sich bitte ab und melden Sie das Problem auf GitHub.</string>
+<string name="filter">Filter</string>
+<string name="search_type">Suchtyp</string>
+<string name="select_service">Dienst auswählen</string>
+<string name="perform_search">Suche ausführen</string>
+<string name="done">Fertig</string>
+<string name="expand">Erweitern</string>
+<string name="collapse">Reduzieren</string>
+<string name="sponsor_promote_later">Vielleicht später</string>
 </resources>

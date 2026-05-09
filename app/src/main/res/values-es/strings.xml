@@ -894,14 +894,14 @@
 <string name="dont_auto_queue_long_description">Solo poner en cola automáticamente vídeos de menos de 6 min</string>
 <string name="enable_notification_text">Por favor, habilita las notificaciones para esta aplicación para asegurar su funcionamiento normal. Solo te alertaremos cuando sea necesario.</string>
 <string name="enable_notification_title">Habilitar notificación</string>
-<string name="sponsor_promote">Conviértete en un patrocinador</string>
+<string name="sponsor_promote">Apoyar en Ko-fi</string>
 <string name="random_play_order_title">Orden aleatorio</string>
 <string name="random_play_order_summary">Baraja automáticamente tus listas de reproducción locales cuando se reproduzcan en segundo plano</string>
-<string name="update_log">Después de trabajar en ello, encontramos un nuevo método confiable para que el inicio de sesión en YouTube vuelva a funcionar.\n\n### Nuevas funciones\n\n- Se vuelve a admitir el inicio de sesión (YouTube)\n- Uso de un nuevo método para asegurar que los títulos nunca se traduzcan automáticamente (YouTube)\n\n### Corrección de errores\n\n- Error aleatorio de \"Contenido no disponible\" debido al cifrado SABR (YouTube)\n- Los elementos relacionados no tienen recuento de vistas ni duración (YouTube)\n- Aumento del intervalo de obtención de feeds para evitar el bloqueo de IP (BiliBili)\n- Algunos enlaces se reconocen erróneamente como URL de PeerTube\n\n### Otros\n\n- Actualización de traducciones (francés)\n- Mejora de la estabilidad</string>
+<string name="update_log">### Nuevas funciones\n\n- Se mejoró ligeramente la interfaz para que PipePipe se vea más moderno\n- Se rediseñó el menú de filtros de búsqueda \n\n### Correcciones de errores\n\n- Fallaba al reproducir videos de YT si se había iniciado sesión bajo ciertas condiciones (YouTube)\n- Los resultados de búsqueda muestran nombres de subidor incorrectos bajo ciertas condiciones (YouTube) \n- Error de análisis bajo ciertas condiciones (YouTube)\n- A veces fallaba al extraer los subidores del canal (BiliBili)\n- A veces fallaba al extraer los detalles del canal debido al control de riesgos (BiliBili)\n- Fallo bajo ciertas condiciones \n\n### Otros\n\n- Mejorar la estabilidad</string>
 <string name="speeding_playback_title">Mantener presionado para acelerar la reproducción</string>
 <string name="view_on_github">Ver en GitHub</string>
-<string name="donation_dialog_title">Apoya el proyecto</string>
-<string name="donation_dialog_message">Gracias por usar PipePipe. Si te resulta útil, por favor, considera convertirte en un patrocinador en Ko-Fi. Tu apoyo es importante para mí y me ayuda a añadir más características emocionantes. ¡Cualquier contribución cuenta! 😇</string>
+<string name="donation_dialog_title">¿Disfrutas de PipePipe?</string>
+<string name="donation_dialog_message">Apóyanos en Ko-fi y ayúdanos a mantener la visualización de videos abierta y libre de rastreo.</string>
 <string name="fullscreen_gesture_control_summary">Usa gestos para entrar / salir de pantalla completa</string>
 <string name="fullscreen_gesture_control_title">Control de gestos en pantalla completa</string>
 <string name="require_audio_focus_summary">Asegúrate de que solo PipePipe esté reproduciendo audio</string>
@@ -1063,4 +1063,14 @@
 <string name="beta_test_dialog_title">¡Únete a la prueba Beta-2 de PipePipe 5.0.0!</string>
 <string name="beta_test_dialog_message">¡Gracias por tu apoyo continuo! Estamos muy emocionados de lanzar PipePipe 5.0.0 Beta-2, un gran paso adelante en la reconstrucción desde cero de la aplicación.\n\nEsta versión se centra en mejoras significativas de la estabilidad y en completar funcionalidades, basadas en los comentarios tempranos. Aunque nos estamos acercando mucho a la versión final, sigue siendo una beta, y tus comentarios son invaluables.\n\nRecordatorio: Esto se instalará como "PipePipe Beta" y no afectará tu aplicación ni tus datos actuales.\n\nSi encuentras algún error o tienes sugerencias, háznoslo saber abriendo un problema en nuestro repositorio de GitHub.</string>
 <string name="trending_replaced">YouTube ha eliminado recientemente la función de Videos en Tendencias, así que hemos actualizado nuestra pestaña de Tendencias predeterminada de YouTube para mostrar transmisiones en vivo recomendadas en su lugar. Si no quieres ver esto, puedes eliminar la pestaña en Configuración y establecer otra como tu página de inicio.</string>
+<string name="youtube_login_warning_title">Inicia sesión solo cuando sea necesario</string>
+<string name="youtube_login_warning_message">Debido al cifrado de YouTube, la reproducción con sesión iniciada solo ofrece formatos AVC, las descargas de solo audio no están disponibles, las transmisiones en vivo en curso no se pueden rebobinar y la extracción es menos estable. \n\nDeberías iniciar sesión solo si:\n1. No puedes ver videos de forma anónima debido a bloqueos de IP\n2. Necesitas ver videos con restricción de edad\n3. Eres miembro de un canal y necesitas ver sus videos solo para miembros\n\nSi la extracción del video o la reproducción falla mientras has iniciado sesión, intenta cerrar sesión e informa del problema en GitHub.</string>
+<string name="filter">Filtro</string>
+<string name="search_type">Tipo de búsqueda</string>
+<string name="select_service">Seleccionar servicio</string>
+<string name="perform_search">Realizar búsqueda</string>
+<string name="done">Hecho</string>
+<string name="expand">Expandir</string>
+<string name="collapse">Contraer</string>
+<string name="sponsor_promote_later">Tal vez más tarde</string>
 </resources>

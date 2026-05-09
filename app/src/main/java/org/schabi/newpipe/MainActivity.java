@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
             builder2.setPositiveButton(R.string.sponsor_promote, (dialog, which) -> {
                 ShareUtils.openUrlInBrowser(this, getString(R.string.donation_url));
             });
-            builder2.setNegativeButton(R.string.no, null);
+            builder2.setNegativeButton(R.string.sponsor_promote_later, null);
 
             final AlertDialog dialog2 = builder2.create();
 
@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
             dialog1.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override
                 public void onDismiss(DialogInterface dialog) {
-                    if((storedVersionCode / 100 < 1095 && currentTime - lastShowDonationTime > 14 * 24 * 60 * 60 * 1000)
+                    if((storedVersionCode / 100 < 1098 && currentTime - lastShowDonationTime > 14 * 24 * 60 * 60 * 1000)
                             || currentTime - lastShowDonationTime > 30L * 24 * 60 * 60 * 1000) {
                         prefs.edit().putLong("last_show_donation_time", currentTime).apply();
                         dialog2.show();

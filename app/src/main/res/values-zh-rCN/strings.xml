@@ -899,11 +899,11 @@
 <string name="sponsor_promote">成为支持者</string>
 <string name="random_play_order_title">随机顺序</string>
 <string name="random_play_order_summary">在后台播放时自动随机播放您的本地播放列表</string>
-<string name="update_log">经过一番努力，我们找到了重新让 YouTube 登录功能恢复正常的新方法。\n\n### 新功能\n\n- 重新支持登录 (YouTube)\n- 使用新方法确保标题不会被自动翻译 (YouTube)\n\n### 问题修复\n\n- 修复了因 SABR 加密导致的随机“内容不可用”错误 (YouTube)\n- 修复了相关项目没有观看次数和时长的问题 (YouTube)\n- 增加订阅源获取间隔以避免 IP 被封 (Bilibili)\n- 修复了部分链接被错误识别为 PeerTube URL 的问题\n\n### 其他\n\n- 更新翻译 (法语)\n- 提高稳定性</string>
+<string name="update_log">### 新功能\n\n- 略微改进了 UI，使 PipePipe 看起来更现代\n- 重新设计了搜索过滤菜单 \n\n### 修复问题\n\n- 在某些情况下，已登录时无法播放 YouTube 视频（YouTube）\n- 在某些情况下，搜索结果中的上传者名称错误（YouTube） \n- 在某些情况下发生解析错误（YouTube）\n- 有时无法提取频道上传者（BiliBili）\n- 有时由于风控无法提取频道详情（BiliBili）\n- 在某些情况下崩溃 \n\n### 其他\n\n- 提高稳定性</string>
 <string name="speeding_playback_title">长按以加快播放</string>
 <string name="view_on_github">在GitHub上查看</string>
 <string name="donation_dialog_title">支持该项目</string>
-<string name="donation_dialog_message">感谢您使用 PipePipe！如果您觉得它有用，请考虑在 Ko-Fi 上成为支持者。您的支持对我很重要，并帮助我添加更多令人兴奋的新功能。每一点都很重要！😇</string>
+<string name="donation_dialog_message">在 Ko-fi 上支持我们，帮助保持视频观看的开放性和无追踪。</string>
 <string name="fullscreen_gesture_control_summary">使用手势进入/退出全屏</string>
 <string name="fullscreen_gesture_control_title">全屏手势控制</string>
 <string name="require_audio_focus_summary">确保只有 PipePipe 正在播放音频</string>
@@ -1069,4 +1069,14 @@
 <string name="beta_test_dialog_title">加入 PipePipe 5.0.0 Beta-2 测试！</string>
 <string name="beta_test_dialog_message">感谢您一直以来的支持！我们很高兴发布 PipePipe 5.0.0 Beta-2，这是我们对应用从零重构的一次重大进展。\n\n此版本根据早期反馈，着重提升稳定性并完善功能。虽然我们离正式版更近了，但它仍然是测试版，您的反馈非常宝贵。\n\n提醒：它将以 \"PipePipe Beta\" 的形式安装，不会影响您当前的应用或数据。\n\n如果您遇到任何问题或有建议，请在我们的 GitHub 仓库提交 issue 告诉我们！</string>
 <string name="trending_replaced">YouTube 最近移除了热门视频功能，因此我们已将默认的 YouTube 热门标签页改为显示推荐直播。如果你不想看到此内容，可以在设置中移除该标签页，并将其他标签页设为你的首页。</string>
+<string name="youtube_login_warning_title">仅在需要时登录</string>
+<string name="youtube_login_warning_message">由于 YouTube 的加密机制，登录状态下播放仅提供 AVC 格式，无法下载纯音频，不支持回放正在直播中的直播流，并且提取稳定性更低。\n\n仅在以下情况下才应登录：\n1. 由于 IP 封锁，你无法匿名观看视频\n2. 你需要观看有年龄限制的视频\n3. 你是某个频道的会员，需要观看仅会员可见的视频\n\n如果在登录状态下视频提取或播放失败，请尝试退出登录并在 GitHub 上报告该问题。</string>
+<string name="filter">筛选</string>
+<string name="search_type">搜索类型</string>
+<string name="select_service">选择服务</string>
+<string name="perform_search">执行搜索</string>
+<string name="done">完成</string>
+<string name="expand">展开</string>
+<string name="collapse">折叠</string>
+<string name="sponsor_promote_later">以后再说</string>
 </resources>

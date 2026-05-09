@@ -854,11 +854,11 @@
 <string name="sponsor_promote">サポーターになる</string>
 <string name="random_play_order_title">ランダムな順序</string>
 <string name="random_play_order_summary">バックグラウンドで再生する際にローカルプレイリストを自動的にシャッフルします</string>
-<string name="update_log">いくつかの作業を経て、YouTubeのログインを再び機能させるための新しい信頼性の高い方法を見つけました。\n\n### 新機能\n\n- ログインの再サポート (YouTube)\n- 新しい手法を使用して、タイトルが自動翻訳されないように修正 (YouTube)\n\n### バグ修正\n\n- SABR暗号化によるランダムな「コンテンツを利用できません」エラー (YouTube)\n- 関連アイテムの再生数と時間が表示されない問題 (YouTube)\n- IPブロックを回避するためにフィード取得間隔を延長 (BiliBili)\n- 一部のリンクが誤ってPeerTubeのURLとして認識される問題\n\n### その他\n\n- 翻訳の更新 (フランス語)\n- 安定性の向上</string>
+<string name="update_log">### 新機能\n\n- PipePipe をより आधुनिकに見えるよう、UI を少し改善しました\n- 検索フィルターメニューを再設計しました\n\n### バグ修正\n\n- 特定の条件下でログイン時に YouTube 動画の再生に失敗する問題を修正しました（YouTube）\n- 特定の条件下で検索結果のアップローダー名が誤って表示される問題を修正しました（YouTube）\n- 特定の条件下で解析エラーが発生する問題を修正しました（YouTube）\n- チャンネルのアップローダーの抽出に失敗することがある問題を修正しました（BiliBili）\n- リスクコントロールのため、チャンネル詳細の抽出に失敗することがある問題を修正しました（BiliBili）\n- 特定の条件下でクラッシュする問題を修正しました\n\n### その他\n\n- 安定性を改善しました</string>
 <string name="speeding_playback_title">長時間押は再生速度を速めることができます</string>
 <string name="view_on_github">GitHubで表示</string>
 <string name="donation_dialog_title">プロジェクトをサポートする</string>
-<string name="donation_dialog_message">PipePipeをご利用いただきありがとうございます！役立つと感じた場合は、Ko-Fiでサポーターになることをご検討ください。あなたのサポートは私にとって重要であり、よりエキサイティングな新機能を追加するのに役立ちます。ほんの少しでも大切です！😇</string>
+<string name="donation_dialog_message">Ko‑fi で私たちを支援して、動画視聴をオープンで追跡なしのまま維持するのにご協力ください。</string>
 <string name="fullscreen_gesture_control_summary">ジェスチャーを使用してフルスクリーンに入る / 退出する</string>
 <string name="fullscreen_gesture_control_title">フルスクリーンジェスチャー制御</string>
 <string name="require_audio_focus_summary">PipePipeだけがオーディオを再生していることを確認してください</string>
@@ -1028,4 +1028,14 @@
 <string name="beta_test_dialog_title">PipePipe 5.0.0 Beta-2 テストに参加しよう！</string>
 <string name="beta_test_dialog_message">いつもご支援いただきありがとうございます！ アプリをゼロから再構築する取り組みの大きな前進となる PipePipe 5.0.0 Beta-2 をリリースできることを大変嬉しく思います。\n\nこのバージョンは、初期のフィードバックに基づき、安定性と機能の完成度の大幅な改善に注力しています。正式リリースにかなり近づいていますが、まだベータ版であり、皆さまからのフィードバックが非常に重要です。\n\nご注意: これは \"PipePipe Beta\" としてインストールされ、現在のアプリやデータには影響しません。\n\n不具合を見つけたりご提案がある場合は、GitHubリポジトリでIssueを作成してぜひお知らせください！</string>
 <string name="trending_replaced">YouTubeは最近「急上昇動画」機能を廃止したため、既定のYouTubeの急上昇タブは、代わりに「おすすめのライブ配信」を表示するように更新しました。これを表示したくない場合は、設定でそのタブを削除し、別のタブをホームページとして設定できます。</string>
+<string name="youtube_login_warning_title">必要な場合のみログインしてください</string>
+<string name="youtube_login_warning_message">YouTubeの暗号化のため、ログイン状態での再生ではAVC形式のみが提供され、音声のみのダウンロードは利用できず、進行中のライブ配信を巻き戻すことはできず、抽出の安定性も低くなります。\n\nログインするのは次の場合のみです:\n1. IPブロックのため匿名では動画を視聴できない\n2. 年齢制限付き動画を視聴する必要がある\n3. チャンネルのメンバーで、メンバー限定動画を視聴する必要がある\n\nログイン中に動画の抽出または再生に失敗した場合は、ログアウトしてからGitHubで問題を報告してください。</string>
+<string name="filter">フィルター</string>
+<string name="search_type">検索タイプ</string>
+<string name="select_service">サービスを選択</string>
+<string name="perform_search">検索を実行</string>
+<string name="done">完了</string>
+<string name="expand">展開</string>
+<string name="collapse">折りたたむ</string>
+<string name="sponsor_promote_later">また後で</string>
 </resources>
